@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import ("fmt"
 
+"runtime")
+var abc=4 
+var abd int //abd will have 0
+var reality bool //default 0->false
 func add(x int, y int) int {
 	return x + y
 }
@@ -23,4 +27,34 @@ func main() {
 	t,y:=split(sum)
 	fmt.Println(t,y)
 
+	count:=1
+	for{
+		if i:="help";count>80{
+			fmt.Println(i)
+			break;
+		}
+		//i=i+1 cant access variables initialised in 'if' outside 'if'
+		count=count*2
+		
+	}
+
+	fmt.Println(count)
+
+
+	//swith  case
+
+	var os=runtime.GOOS;
+	switch os{
+	case "darwin":
+		fmt.Println("darwin")
+	case "linux":
+		fmt.Println("linux")
+	default:
+		fmt.Println("eew windows?")		
+	}
+
+
+
+
+	
 }
