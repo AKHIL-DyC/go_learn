@@ -53,8 +53,24 @@ func main() {
 		fmt.Println("eew windows?")		
 	}
 
+//switch{case:}at as ifelse if else else
+
+defer fmt.Println("akhil");//when defer is found it is not executed rather pushed to a stack ,then after whole function is over ,one by one popped 
+defer fmt.Println("is");
+fmt.Println("my name");
+
+p:=10
+q:=&p
+fmt.Println((*q))//prints 10
 
 
 
+
+type coordinates struct{
+	x int
+	y int
+}
+v:=coordinates{1,2}//{}if empty implicit values taken
+fmt.Println(v.x)
 	
 }
